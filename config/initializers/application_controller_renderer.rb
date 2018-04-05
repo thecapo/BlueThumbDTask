@@ -6,3 +6,5 @@
 #     https: false
 #   )
 # end
+  FlickRaw.api_key="502928873e47424eef51b2d885449dbb"
+  FlickRaw.shared_secret="ae0b8644a90cf9ac"
