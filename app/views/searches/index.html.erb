@@ -5,6 +5,5 @@
   <%= search.server %>
   <%= search.id %>
   <%= search.secret %></p> 
-  <%= image_tag("https://farm#{search.farm}.staticflickr.com/#{search.server}/#{search.id}_#{search.secret}.jpg")%>
-  
+  <%= link_to image_tag("https://farm#{search.farm}.staticflickr.com/#{search.server}/#{search.id}_#{search.secret}.jpg"), "https://farm#{search.farm}.staticflickr.com/#{search.server}/#{search.id}_#{search.secret}.jpg"%>
 <% end %>

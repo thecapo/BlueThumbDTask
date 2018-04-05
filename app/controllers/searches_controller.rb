@@ -1,7 +1,7 @@
 class SearchesController < ApplicationController
   
   def index
-    @searches = flickr.photos.search(text:"car")
+    @searches = flickr.photos.search(text:"iron man")
   end
 end
 
