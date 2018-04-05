@@ -1,12 +1,14 @@
 <%= form_tag(searches_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Photos" %>
-    <%= submit_tag "Search", :name => nil %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Photos" %>
+  <%= submit_tag "Search", :name => nil %>
 <% end %>
 
-<% @searches.each do |search| %>
- <p><%= search.farm %>
+<% if params[:search].present? %>
+  <% @searches.each do |search| %>
+  <p><%= search.farm %>
   <%= search.server %>
   <%= search.id %>
   <%= search.secret %></p> 
   <%= link_to image_tag("https://farm#{search.farm}.staticflickr.com/#{search.server}/#{search.id}_#{search.secret}.jpg"), "https://farm#{search.farm}.staticflickr.com/#{search.server}/#{search.id}_#{search.secret}.jpg"%>
+  <% end %>
 <% end %>
