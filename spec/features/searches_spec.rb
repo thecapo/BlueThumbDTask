@@ -57,7 +57,11 @@ RSpec.feature "Searches", type: :feature do
           fill_in 'Search Photos', with: 'cars'
         end
         click_button 'Search'
-        (page).find([:href]).click
+        flickr_link = find(:xpath, '//a[1]/img')
+        flickr_link.click
     end
   end
 end
+
+
+
